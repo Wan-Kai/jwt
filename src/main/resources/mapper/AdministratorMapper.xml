@@ -8,12 +8,13 @@
         <result column="user_password" property="password" jdbcType="VARCHAR" />
     </resultMap>
 
+
     <select id="selectMaxId" resultType="String">
         select max(user_id) from administrator
     </select>
 
     <select id="selectEqualName" resultMap="UserMap" parameterType="String">
-        select user_name,user_id,user_password,session_id
+        select user_name,user_id,user_password
         from administrator
         where user_name = #{username}
     </select>

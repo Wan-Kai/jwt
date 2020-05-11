@@ -11,16 +11,6 @@ public class Administrator {
     //密码
     private String password;
 
-    private String sessionId;
-
-    public String getSessionId() {
-        return sessionId;
-    }
-
-    public void setSessionId(String sessionId) {
-        this.sessionId = sessionId;
-    }
-
     public String getUserId() {
         return userId;
     }

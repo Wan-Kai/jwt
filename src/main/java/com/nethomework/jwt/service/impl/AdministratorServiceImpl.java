@@ -17,15 +17,14 @@ public class AdministratorServiceImpl implements AdministratorService  {
 
     @Override
     public int register(Administrator administrator) throws Exception {
-        List<Administrator> username = mapper.selectEqualName(administrator.getUsername());
-        int length = username.size();
+        List<Administrator> administrators = mapper.selectEqualName(administrator.getUsername());
+        int length = administrators.size();
         if (length == 0) {
             //id自增
             String id = mapper.selectMaxId();
             int idNum = Integer.parseInt(id) + 1;
             administrator.setUserId(String.format("%d", idNum));
-            administrator.setSessionId(String.format("%d", idNum));
-            mapper.insert(administrator);
+            //mapper.insert(administrator);
             return 0;
         } else {
             return 1;

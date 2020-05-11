@@ -22,4 +22,3 @@ spring:
 # 配置为 com.pancm.bean 指向实体类包路径。
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.nethomework.jwt.domain
